@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title> Новий пост </title>
+{% endblock title %}
+
+{% block content %}
+<!-- Вміст сторінки -->
+<div class="container">
+    <h2 class="my-4 text-center">Новий пост</h2>
+    {% for type, message in get_flashed_messages(True) %}
+        <div class="alert {{type}} my-3 "> {{message}} </div>
+    {% endfor %}
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Назва поста</label>
+            <input required name="title" type="text" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Текст поста</label>
+            <textarea required name="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Додайте зображення для поста</label>
+            <input name="image" class="form-control" type="file" id="formFile">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Категорія поста</label>
+            <input required name="category" type="text" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <button type="submit" class="btn btn-primary">Додати пост</button>
+    </form>
+</div>
+
+{% endblock content %}

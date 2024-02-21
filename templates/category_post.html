@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<!-- Вміст сторінки -->
+<h2 class="my-4 text-center">LogikaBlog - блог про програмування</h2>
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">
+    {% for post in posts %}
+      <div class="col">
+        {% include 'post_card.html' %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+ 
+{% block title %}
+<title> Пост </title>
+{% endblock title %}
+
+{% block content %}
+<!-- Вміст сторінки -->
+   <div class="container">
+      <h2 class="my-4 text-center">{{post[2]}}</h2>
+
+      <img src="{{ url_for('static', filename='img/'+post[4]) }}" class="img-fluid" alt="...">
+      <p class="my-3">{{post[3] | safe}}</p>
+      <p><i>{{post[5]}}</i></p>
+    
+
+   </div>
+   
+{% endblock content %}
+  

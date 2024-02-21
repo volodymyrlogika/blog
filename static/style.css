@@ -1,0 +1,34 @@
+.red{
+    color: red;
+    font-weight: 700;
+}
+
+body{
+    background: #530953;
+    color: white;
+    font-family: "Source Code Pro", monospace;
+}
+
+
+
+.my-btn{
+    display: block;
+    color: white;
+    background: orange;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+
+.alert-danger{
+    background-color: rgb(252, 65, 65);
+}
+
+footer{
+    background-color: rgb(52, 52, 52);
+    color: #fff;
+}
